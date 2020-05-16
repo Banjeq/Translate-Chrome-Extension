@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery.js"></script>
+    <script src="popup.js"></script>
+
+	<META charset="utf-8">
+    <title></title>
+	<style>
+	textarea {
+		resize: none;
+	} 
+	
+	</style>
+</head>
+<body>
+<h1 style="color: #5e9ca0; text-align: center;"><span style="color: #000000;">Переводчик</span></h1>
+
+	<input id="From" list="ListFrom" value="определить язык" Label="auto" style="width: 153px;">
+	<datalist id="ListFrom"> 
+		<option Value="определить язык" Label="auto">
+		<option value="азербайджанский" label="az">
+		<option value="албанский" label="sq">
+		<option value="амхарский" label="am">
+		<option value="английский" label="en">
+		<option value="арабский" label="ar">
+		<option value="армянский" label="hy">
+		<option value="африкаанс" label="af">
+		<option value="баскский" label="eu">
+		<option value="башкирский" label="ba">
+		<option value="белорусский" label="be">
+		<option value="бенгальский" label="bn">
+		<option value="бирманский" label="my">
+		<option value="болгарский" label="bg">
+		<option value="боснийский" label="bs">
+		<option value="валлийский" label="cy">
+		<option value="венгерский" label="hu">
+		<option value="вьетнамский" label="vi">
+		<option value="гаитянский (креольский)" label="ht">
+		<option value="галисийский" label="gl">
+		<option value="голландский" label="nl">
+		<option value="горномарийский" label="mrj">
+		<option value="греческий" label="el">
+		<option value="грузинский" label="ka">
+		<option value="гуджарати" label="gu">
+		<option value="датский" label="da">
+		<option value="иврит" label="he">
+		<option value="идиш" label="yi">
+		<option value="индонезийский" label="id">
+		<option value="ирландский" label="ga">
+		<option value="исландский" label="is">
+		<option value="испанский" label="es">
+		<option value="итальянский" label="it">
+		<option value="казахский" label="kk">
+		<option value="каннада" label="kn">
+		<option value="каталанский" label="ca">
+		<option value="киргизский" label="ky">
+		<option value="китайский" label="zh">
+		<option value="корейский" label="ko">
+		<option value="коса" label="xh">
+		<option value="кхмерский" label="km">
+		<option value="лаосский" label="lo">
+		<option value="латынь" label="la">
+		<option value="латышский" label="lv">
+		<option value="литовский" label="lt">
+		<option value="люксембургский" label="lb">
+		<option value="македонский" label="mk">
+		<option value="малагасийский" label="mg">
+		<option value="малайский" label="ms">
+		<option value="малаялам" label="ml">
+		<option value="мальтийский" label="mt">
+		<option value="маори" label="mi">
+		<option value="маратхи" label="mr">
+		<option value="марийский" label="mhr">
+		<option value="монгольский" label="mn">
+		<option value="немецкий" label="de">
+		<option value="непальский" label="ne">
+		<option value="норвежский" label="no">
+		<option value="панджаби" label="pa">
+		<option value="папьяменто" label="pap">
+		<option value="персидский" label="fa">
+		<option value="польский" label="pl">
+		<option value="португальский" label="pt">
+		<option value="румынский" label="ro">
+		<option value="русский" label="ru">
+		<option value="себуанский" label="ceb">
+		<option value="сербский" label="sr">
+		<option value="сингальский" label="si">
+		<option value="словацкий" label="sk">
+		<option value="словенский" label="sl">
+		<option value="суахили" label="sw">
+		<option value="сунданский" label="su">
+		<option value="тагальский" label="tl">
+		<option value="таджикский" label="tg">
+		<option value="тайский" label="th">
+		<option value="тамильский" label="ta">
+		<option value="татарский" label="tt">
+		<option value="телугу" label="te">
+		<option value="турецкий" label="tr">
+		<option value="удмуртский" label="udm">
+		<option value="узбекский" label="uz">
+		<option value="украинский" label="uk">
+		<option value="урду" label="ur">
+		<option value="финский" label="fi">
+		<option value="французский" label="fr">
+		<option value="хинди" label="hi">
+		<option value="хорватский" label="hr">
+		<option value="чешский" label="cs">
+		<option value="шведский" label="sv">
+		<option value="шотландский" label="gd">
+		<option value="эсперанто" label="eo">
+		<option value="эстонский" label="et">
+		<option value="яванский" label="jv">
+		<option value="японский" label="ja">
+	</datalist>
+	
+	<button id="btn_rev" type="submit">↔</button>
+	
+	<input id="To" list="ListTo" value="русский" Label="ru" style="width: 153px;">
+	<datalist id="ListTo">
+		<option value="азербайджанский" label="az">
+		<option value="албанский" label="sq">
+		<option value="амхарский" label="am">
+		<option value="английский" label="en">
+		<option value="арабский" label="ar">
+		<option value="армянский" label="hy">
+		<option value="африкаанс" label="af">
+		<option value="баскский" label="eu">
+		<option value="башкирский" label="ba">
+		<option value="белорусский" label="be">
+		<option value="бенгальский" label="bn">
+		<option value="бирманский" label="my">
+		<option value="болгарский" label="bg">
+		<option value="боснийский" label="bs">
+		<option value="валлийский" label="cy">
+		<option value="венгерский" label="hu">
+		<option value="вьетнамский" label="vi">
+		<option value="гаитянский(креольский)" label="ht">
+		<option value="галисийский" label="gl">
+		<option value="голландский" label="nl">
+		<option value="горномарийский" label="mrj">
+		<option value="греческий" label="el">
+		<option value="грузинский" label="ka">
+		<option value="гуджарати" label="gu">
+		<option value="датский" label="da">
+		<option value="иврит" label="he">
+		<option value="идиш" label="yi">
+		<option value="индонезийский" label="id">
+		<option value="ирландский" label="ga">
+		<option value="исландский" label="is">
+		<option value="испанский" label="es">
+		<option value="итальянский" label="it">
+		<option value="казахский" label="kk">
+		<option value="каннада" label="kn">
+		<option value="каталанский" label="ca">
+		<option value="киргизский" label="ky">
+		<option value="китайский" label="zh">
+		<option value="корейский" label="ko">
+		<option value="коса" label="xh">
+		<option value="кхмерский" label="km">
+		<option value="лаосский" label="lo">
+		<option value="латынь" label="la">
+		<option value="латышский" label="lv">
+		<option value="литовский" label="lt">
+		<option value="люксембургский" label="lb">
+		<option value="македонский" label="mk">
+		<option value="малагасийский" label="mg">
+		<option value="малайский" label="ms">
+		<option value="малаялам" label="ml">
+		<option value="мальтийский" label="mt">
+		<option value="маори" label="mi">
+		<option value="маратхи" label="mr">
+		<option value="марийский" label="mhr">
+		<option value="монгольский" label="mn">
+		<option value="немецкий" label="de">
+		<option value="непальский" label="ne">
+		<option value="норвежский" label="no">
+		<option value="панджаби" label="pa">
+		<option value="папьяменто" label="pap">
+		<option value="персидский" label="fa">
+		<option value="польский" label="pl">
+		<option value="португальский" label="pt">
+		<option value="румынский" label="ro">
+		<option value="русский" label="ru">
+		<option value="себуанский" label="ceb">
+		<option value="сербский" label="sr">
+		<option value="сингальский" label="si">
+		<option value="словацкий" label="sk">
+		<option value="словенский" label="sl">
+		<option value="суахили" label="sw">
+		<option value="сунданский" label="su">
+		<option value="тагальский" label="tl">
+		<option value="таджикский" label="tg">
+		<option value="тайский" label="th">
+		<option value="тамильский" label="ta">
+		<option value="татарский" label="tt">
+		<option value="телугу" label="te">
+		<option value="турецкий" label="tr">
+		<option value="удмуртский" label="udm">
+		<option value="узбекский" label="uz">
+		<option value="украинский" label="uk">
+		<option value="урду" label="ur">
+		<option value="финский" label="fi">
+		<option value="французский" label="fr">
+		<option value="хинди" label="hi">
+		<option value="хорватский" label="hr">
+		<option value="чешский" label="cs">
+		<option value="шведский" label="sv">
+		<option value="шотландский" label="gd">
+		<option value="эсперанто" label="eo">
+		<option value="эстонский" label="et">
+		<option value="яванский" label="jv">
+		<option value="японский" label="ja">
+	</datalist> 
+	
+	<br><br>
+    <textarea id="inputs" rows="9" cols="47" style="resize: none;">hello</textarea>
+	<br>
+	<textarea id="outputs" rows="9" cols="47" style="resize: none;"></textarea>
+	<br>
+    <button id="btn_submit" type="submit">Перевести</button>
+	<div id="output"></div>
+</body>
+</html>
